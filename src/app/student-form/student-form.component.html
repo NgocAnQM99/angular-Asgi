@@ -1,0 +1,45 @@
+<br>
+<div class="col-6 offset-3">
+	<form [formGroup]="studentForm">
+		<div class='form-group'>
+			<label for="">Tên Người Thuê</label>
+			<input type="text" formControlName="name">
+  </div>
+			<div class='form-group'>
+				<label for="">avatar</label>
+				<input type="text" formControlName="avatar">
+  </div>
+				<div class='form-group'>
+					<label for="">Địa chỉ khách sạn:</label>
+					<input type="text" formControlName="address">
+  </div>
+					<div class='form-group'>
+						<label for="">roll_number:</label>
+						<input type="text" formControlName="roll_number">
+  </div>
+
+						<div class='form-group'>
+							<label for="">address:</label>
+							<input type="text" formControlName="address">
+  </div>
+							<div class='form-group'>
+								<label for="">room_no:</label>
+								<input type="text" formControlName="room_no">
+  </div>
+								<div class='form-group'>
+									<label for="">motelId:</label>
+									<select  formControlName="motelId"  >
+<option  *ngFor="let mt of motels" value = "mt.id">{{mt.name}}</option>
+	
+</select>
+									<input type="text" formControlName="motelId">
+
+								</div>
+									<div>
+										<button (click)="saveStudent()">Lưu</button>
+									</div>
+									<!-- 
+<h3> <a [routerLink]=""  >  Back </a> </h3> -->
+
+	</form>
+</div>

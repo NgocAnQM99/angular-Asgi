@@ -1,0 +1,24 @@
+<div class="container">
+	<a routerLink="add-motel">Tạo mới</a>
+
+	<table class="table table-dark">
+		<thead>
+			<tr>
+				<th scope="col">ID</th>
+				<th scope="col">Name</th>
+				<th scope="col">address</th>
+				<th scope="col">IMG</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let motel of motels">
+				<th scope="row"><a [routerLink]="['detail', motel.id]">{{motel.id}}</a></th>
+				<td><a [routerLink]="['detail', motel.id]">{{motel.name}}</a></td>
+				<td><a [routerLink]="['detail', motel.id]">{{motel.address}}</a></td>
+				<td><img [src] = "motel.image" width="50"> </td>
+			</tr>
+
+
+		</tbody>
+	</table>
+</div>

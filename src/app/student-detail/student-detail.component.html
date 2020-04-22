@@ -1,0 +1,7 @@
+<h2>{{studentData.name}}</h2>
+<img [src]="studentData.avatar" width="150">
+<br>
+<h3>{{studentData.address}}</h3>
+<a [routerLink]="['../../edit-student', studentData.sid]">Cập nhật</a> 
+&nbsp;
+<button (click)="removeStudent()">Delete</button>

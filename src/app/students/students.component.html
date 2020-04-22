@@ -1,0 +1,27 @@
+<div class="container">
+	<a routerLink="add-student">Tạo mớiiiii</a>
+
+	<table class="table table-dark">
+		<thead>
+			<tr>
+				<th scope="col">SID</th>
+				<th scope="col">Name</th>
+				<th scope="col">roll_number</th>
+        <th scope="col">address</th>
+				<th scope="col">IMG</th>
+			</tr>
+		</thead>
+		<tbody>
+      			<tr *ngFor="let student of students">
+       
+				<th scope="row"><a [routerLink]="['detail1', student.sid]">{{student.sid}}</a></th>
+				<td><a [routerLink]="['detail1', student.sid]">{{student.name}}</a></td>
+				<td><a [routerLink]="['detail1', student.sid]">{{student.roll_number}}</a></td>
+        <td><a [routerLink]="['detail1', student.sid]">{{student.address}}</a></td>
+				<td><img [src] = "student.avatar" width="50"> </td>
+			</tr>
+
+
+		</tbody>
+	</table>
+</div>

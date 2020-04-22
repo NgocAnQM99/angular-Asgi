@@ -1,0 +1,24 @@
+<div class="container">
+	<div class="row">
+		<div class="col-4">
+		</div>
+		<div class="col-6">
+
+			<h2>{{motelData.name}}</h2>
+			<img [src]="motelData.image" width="150">
+			<br>
+			<h3>{{motelData.address}}, {{motelData.country}}</h3>
+			<a [routerLink]="['../../edit-motel', motelData.id]" class="btn btn-sm btn-primary ">Cập nhật</a>
+			&nbsp;
+			<button class = "btn btn-sm btn-primary " (click)="removeMotel()">Delete</button>
+		</div>
+		<div class="col-2">
+		</div>
+
+
+
+	</div>
+	<div>
+		<app-students></app-students>
+	</div>
+	< </div>

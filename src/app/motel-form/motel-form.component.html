@@ -1,0 +1,29 @@
+<br>
+<div class="col-6 offset-3">
+
+	<form [formGroup]="motelForm">
+
+
+		<div class='form-group'>
+			<label for="">Tên khách sạn:</label>
+			<input type="text" formControlName="name">
+  </div>
+
+			<div class='form-group'>
+				<label for="">Địa chỉ khách sạn:</label>
+				<input type="text" formControlName="address">
+  </div>
+				<div class='form-group'>
+					<label for="">Đất nước   ():            </label>
+					<input type="text" formControlName="owner">
+  </div>
+					<div class='form-group'>
+						<label for="">Logo khách sạn:</label>
+						<input type="text" formControlName="image">
+  </div>
+						<img [src]= "motelForm.value.image" width="60" height="70">
+						<div>
+							<button (click)="saveMotel()">Lưu</button>
+						</div>
+	</form>
+</div>
